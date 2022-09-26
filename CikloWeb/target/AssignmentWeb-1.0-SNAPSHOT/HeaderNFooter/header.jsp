@@ -16,7 +16,7 @@
                     <ul class="nav">
                         <li><a href="index.jsp">Home</a></li>
                         <li><a href="DetailRoute.jsp">Detail ${route}</a></li>
-                        <li><a href="reservation.html">About Us</a></li>
+                        <li><a href="About.jsp">About Us</a></li>
                         <li>
                             <form class="d-flex" role="search" id="searchBtn">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

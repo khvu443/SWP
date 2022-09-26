@@ -1,0 +1,20 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Descriptions": "<strong>Concept A</strong><p>Example for geojson</p>",
+                "icon": "music-15"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    108.32672179204343,
+                    15.876701834599857
+                ]
+            }
+            
+        }
+    ]
+}
