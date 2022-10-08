@@ -1,5 +1,5 @@
-
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">
@@ -24,19 +24,37 @@
                             </form>
                         </li>
                         <li>    
+                        <c:if test="${not empty User}">
                             <div class="d-flex">                            
-                                <img src="image/avatar.png"  alt="thumbnail img" style="width: 30px; height: 30px">
-                                <p class="text-white">User</p>
+                                <c:set var = "ID" value = "${ID}"></c:set>
+                                <c:if test = "${fn:contains(ID, 'D')}">
+                                    <p class= "text-secondary">Hello ${User.driverName}</p>
+                                </c:if>
+
+                                <c:if test = "${fn:contains(ID, 'KH')}">
+
+                                    <p class= "text-secondary">Hello ${User.cusName}</p>
+                                </c:if>
+
+                                <c:if test = "${fn:contains(ID, 'AD')}">
+                                    <p class= "text-secondary">Hello ${User.driverName}</p>
+                                </c:if>
                             </div>
-                        </li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- ***** Header Area End ***** -->
+                        </c:if>
+                        <c:if test="${empty User}">
+                            <a href="Login.jsp"><i class=""></i> Login</ <aa>
+                                    </c:if>
+
+
+                                    </li>
+                                    </ul>   
+                                    <a class='menu-trigger'>
+                                        <span>Menu</span>
+                                    </a>
+                                    <!-- ***** Menu End ***** -->
+                                    </nav>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </header>
+                                    <!-- ***** Header Area End ***** -->

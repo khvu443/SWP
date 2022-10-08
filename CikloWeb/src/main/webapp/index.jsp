@@ -222,8 +222,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-8">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-lg-7">
                             <div class="items">
                                 <div class="row">
                                     <div class="col-lg-12">
@@ -328,15 +328,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--                        <div class="col-lg-4">
-                                                    <div class="side-bar-map">
-                                                        <div class="row">
-                                                            <div class="col-lg-12">
-                                                                <div id="map" width="100%" height="550px" frameborder="0" style="border:0; border-radius: 23px; "></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
+
                         <div class="col-lg-4"><div id="map"  style="width: 400px; height: 700px;"></div></div>
 
 

@@ -94,8 +94,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div id="map"></div>
+
                         </div>
+
+                        <div id="map" style="width: 936px; height: 456px  "></div>
 
                         <div class="col-lg-12">
                             <form id="reservation-form" name="gs" method="submit" role="search" action="#">
@@ -177,10 +179,10 @@
         <script src="JavaScript/mapAPI.js"></script>
 
         <script>
-                                            $(".option").click(function () {
-                                                $(".option").removeClass("active");
-                                                $(this).addClass("active");
-                                            });
+                                                $(".option").click(function () {
+                                                    $(".option").removeClass("active");
+                                                    $(this).addClass("active");
+                                                });
         </script>
 
     </body>
