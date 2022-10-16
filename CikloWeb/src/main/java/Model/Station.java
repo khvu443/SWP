@@ -5,9 +5,19 @@
 package Model;
 
 public class Station {
+    
     private String stationID;
-    private String locaiton;
-    private String stationName;
+    private String stationLoc;
+    private String  stationName;
+
+    public Station() {
+    }
+
+    public Station(String stationID, String stationLoc, String stationName) {
+        this.stationID = stationID;
+        this.stationLoc = stationLoc;
+        this.stationName = stationName;
+    }
 
     public String getStationID() {
         return stationID;
@@ -17,12 +27,12 @@ public class Station {
         this.stationID = stationID;
     }
 
-    public String getLocaiton() {
-        return locaiton;
+    public String getStationLoc() {
+        return stationLoc;
     }
 
-    public void setLocaiton(String locaiton) {
-        this.locaiton = locaiton;
+    public void setStationLoc(String stationLoc) {
+        this.stationLoc = stationLoc;
     }
 
     public String getStationName() {
@@ -35,8 +45,7 @@ public class Station {
 
     @Override
     public String toString() {
-        return "Station{" + "stationID=" + stationID + ", locaiton=" + locaiton + ", stationName=" + stationName + '}';
+        return "station{" + "stationID=" + stationID + ", stationLoc=" + stationLoc + ", stationName=" + stationName + '}';
     }
-    
-    
+        
 }

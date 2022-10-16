@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
                             response.addCookie(cookieRemember);
                         }
                     }
-                    url = "TestJSP.jsp";
+                    url = "DriverPage";
                 }
 
             }

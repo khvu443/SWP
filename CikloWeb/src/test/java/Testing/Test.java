@@ -4,31 +4,24 @@
  */
 package Testing;
 
-import Model.*;
 import DAO.*;
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import Model.*;
+import System.AvgEarningDriver;
+import System.SaveToJSON;
+import java.text.*;
+import java.util.*;
 
 public class Test {
 
-    public static void main(String[] args) {
-        DriverDAO d = new DriverDAO();
-        CustomerDAO c = new CustomerDAO();
-        AdminDAO a = new AdminDAO();
+    static SaveToJSON save = new SaveToJSON();
+    static AvgEarningDriver avg = new AvgEarningDriver();
 
-        ArrayList<Customer> cl = c.getAllCustomer();
+    public static void main(String[] args) throws ParseException {
+        BillDAO bills = new BillDAO();
+        ArrayList<Bill> b = bills.getAllBillOfDriver("D1");
+        
+        save.saveFile(avg.EarningAvg(b), "EarningAvg");
+        save.saveFile(avg.NumberTrip(b), "NumberTrip");
 
-        System.out.println(isMailValid("Khvu443@gmail.com"));
     }
-
-    static    boolean isMailValid(String mail)
-    {
-        String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
-        Pattern r = Pattern.compile(regex);
-        Matcher m = r.matcher(mail);
-        if(m.matches()) return true;
-        return false;
-    }
-
 }

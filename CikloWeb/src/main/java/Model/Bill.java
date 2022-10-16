@@ -4,12 +4,42 @@
  */
 package Model;
 
-
 public class Bill {
+
     private String billID;
     private String cusID;
     private String driverID;
     private String detailID;
+    private double Total;
+    private String Date;
+
+    public Bill() {
+    }
+
+    public Bill(String billID, String cusID, String driverID, String detailID, double total, String Date) {
+        this.billID = billID;
+        this.cusID = cusID;
+        this.driverID = driverID;
+        this.detailID = detailID;
+        this.Total = total;
+        this.Date = Date;
+    }
+
+    public double getTotal() {
+        return Total;
+    }
+
+    public void setTotal(double Total) {
+        this.Total = Total;
+    }
+
+    public String getDate() {
+        return Date;
+    }
+
+    public void setDate(String Date) {
+        this.Date = Date;
+    }
 
     public String getBillID() {
         return billID;
@@ -45,8 +75,7 @@ public class Bill {
 
     @Override
     public String toString() {
-        return "Bill{" + "billID=" + billID + ", cusID=" + cusID + ", driverID=" + driverID + ", detailID=" + detailID + '}';
+        return "Bill{" + "billID=" + billID + ", cusID=" + cusID + ", driverID=" + driverID + ", detailID=" + detailID + ", Total=" + Total + ", Date=" + Date + '}';
     }
-    
-    
+
 }

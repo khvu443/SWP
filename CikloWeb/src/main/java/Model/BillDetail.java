@@ -9,8 +9,20 @@ public class BillDetail {
     private String detailID;
     private String routeID;
     private double price;
-    private int waitingTime;
+    private double waitingTime;
 
+    public BillDetail() {
+    }
+
+    
+    
+    public BillDetail(String detailID, String routeID, double price, double waitingTime) {
+        this.detailID = detailID;
+        this.routeID = routeID;
+        this.price = price;
+        this.waitingTime = waitingTime;
+    }
+    
     public String getDetailID() {
         return detailID;
     }
@@ -35,11 +47,11 @@ public class BillDetail {
         this.price = price;
     }
 
-    public int getWaitingTime() {
+    public double getWaitingTime() {
         return waitingTime;
     }
 
-    public void setWaitingTime(int waitingTime) {
+    public void setWaitingTime(double waitingTime) {
         this.waitingTime = waitingTime;
     }
 
