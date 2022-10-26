@@ -5,3 +5,5 @@ Có chỉnh sửa lại Route, Bill và Bill Detail
 + Date là ngày đi 
 - Route thì bỏ trường esTime và sửa lại dữ liệu cũ thành mới 
 + Dữ liệu mới là tuyến lớn ko còn và sẽ là những tuyến nhỏ
+
+Có liên kết giữa 2 bảng driver và route
