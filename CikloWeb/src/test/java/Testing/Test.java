@@ -18,42 +18,10 @@ public class Test {
 
     public static void main(String[] args) throws ParseException {
 
-        BillDAO dao = new BillDAO();
-        ArrayList<Bill> bl = dao.getAllBillOfDriver("D1");
-        System.out.println(bl + "\n");
-
-        ArrayList<Bill> fl = new ArrayList<>();
-        ArrayList<Bill> fl1 = new ArrayList<>();
-        ArrayList<Bill> fl2 = new ArrayList<>();
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        for (int i = 0; i < bl.size(); i++) {
-            if (isDateNow(sdf.parse(bl.get(i).getDate()))) {
-                System.out.println("true");
-                fl.add(bl.get(i));
-            }
-        }
-
-        System.out.println(fl);
-
-        for (int i = 0; i < bl.size(); i++) {
-            if (isCurrentMonth(sdf.parse(bl.get(i).getDate()))) {
-                System.out.println("true");
-                fl1.add(bl.get(i));
-            }
-        }
-
-        System.out.println(fl1);
-
-        for (int i = 0; i < bl.size(); i++) {
-            if (isDateInCurrentWeek(sdf.parse(bl.get(i).getDate()))) {
-                System.out.println("true");
-                fl2.add(bl.get(i));
-            }
-        }
-
-        System.out.println(fl2);
-
+        DriverDAO dao = new DriverDAO();
+        Driver d = dao.getDriverBy("NVA", "1234");
+        
+        System.out.println(d.getDriverAvatar());
     }
 
     public static boolean isDateInCurrentWeek(Date date) {

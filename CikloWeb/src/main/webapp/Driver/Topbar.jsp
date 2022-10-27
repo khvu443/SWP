@@ -72,8 +72,8 @@
                 >
                 <img
                     class="img-profile rounded-circle"
-                    src="${User.driverAvatar}"
-                    />
+                    src="${User.getDriverAvatar()}"
+                    >
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

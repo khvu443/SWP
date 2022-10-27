@@ -133,7 +133,7 @@ public class UpdateAccountServlet extends HttpServlet {
             if (driver != null) {
 
                 Part part = request.getPart("photo");
-                String photoPath = request.getServletContext().getRealPath("Driver/image");
+                String photoPath = request.getServletContext().getRealPath("/Driver/img");
 
                 System.out.println("part " + part);
                 System.out.println("photoPath " + photoPath);
@@ -144,7 +144,7 @@ public class UpdateAccountServlet extends HttpServlet {
                 }
                 part.write(photoPath + "/" + filename);
 
-                ddao.updateDriver(driver.getDriverID(), name, username, password, email, phone, "/Driver/image/" + filename, gender);
+                ddao.updateDriver(driver.getDriverID(), name, username, password, email, phone, "img/" + filename, gender);
                 request.setAttribute("message",
                         "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">\n"
                         + "  <i class=\"bi bi-check-lg\"></i> UPDATE SUCCESS\n"

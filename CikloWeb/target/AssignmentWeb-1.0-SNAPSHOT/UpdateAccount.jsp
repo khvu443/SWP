@@ -77,12 +77,15 @@
 
                                 <c:if test = "${fn:contains(ID, 'D')}">
                                     <div class="form-group my-3">
+
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="true">
+                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="true" ${u.driverGender == true ? "Checked" : ""}>
                                             <label class="form-check-label" for="inlineRadio1">Male</label>
                                         </div>
+
+
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="false">
+                                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="false" ${u.driverGender == false ? "Checked" : ""}> 
                                             <label class="form-check-label" for="inlineRadio2">Female</label>
                                         </div>
                                     </div>
