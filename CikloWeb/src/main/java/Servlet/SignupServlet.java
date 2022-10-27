@@ -38,17 +38,18 @@ public class SignupServlet extends HttpServlet {
 
             System.out.println("new acc:" + id + " - " + username + " - " + password + " - " + name + " - " + email + " - " + phone);
             if (checkDuplicateUserName(username, cl)) {
-                request.setAttribute("Error", "<span><i class=\"bi bi-exclamation-triangle-fill\"></i></span> Username's exist");
+                request.setAttribute("Error", "<i class=\"bi bi-exclamation-triangle-fill\"></i> Username's exist");
                 url = "Login.jsp";
             }
             else
             if (isMailValid(email)) {
-                request.setAttribute("Error", "<span><i class=\"bi bi-exclamation-triangle-fill\"></i></span> Invalid Email");
+                request.setAttribute("Error", "<i class=\"bi bi-exclamation-triangle-fill\"></i>Invalid Email");
                 url = "Login.jsp";
             }
             else {
                 System.out.println("Add customer");
                 cusDao.addCustomer(id, name, email, username, password, phone);
+                request.setAttribute("Success", "<i class=\"bi bi-check\"></i>Sign Up Success");
                 url = "Login.jsp";
             }
 

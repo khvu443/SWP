@@ -9,19 +9,19 @@ public class Admin {
     private String adName;
     private String adUserName;
     private String adPass;
-    private String adMMail;
+    private String adMail;
     private String adPhone;
     private String adAvatar;
 
     public Admin() {
     }
 
-    public Admin(String adID, String adName, String adUserName, String adPass, String adMMail, String adPhone, String adAvatar) {
+    public Admin(String adID, String adName, String adUserName, String adPass, String adMail, String adPhone, String adAvatar) {
         this.adID = adID;
         this.adName = adName;
         this.adUserName = adUserName;
         this.adPass = adPass;
-        this.adMMail = adMMail;
+        this.adMail = adMail;
         this.adPhone = adPhone;
         this.adAvatar = adAvatar;
     }
@@ -58,12 +58,12 @@ public class Admin {
         this.adPass = adPass;
     }
 
-    public String getAdMMail() {
-        return adMMail;
+    public String getAdMail() {
+        return adMail;
     }
 
-    public void setAdMMail(String adMMail) {
-        this.adMMail = adMMail;
+    public void setAdMMail(String adMail) {
+        this.adMail = adMail;
     }
 
     public String getAdPhone() {
@@ -84,7 +84,7 @@ public class Admin {
 
     @Override
     public String toString() {
-        return "Admin{" + "adID=" + adID + ", adName=" + adName + ", adUserName=" + adUserName + ", adPass=" + adPass + ", adMMail=" + adMMail + ", adPhone=" + adPhone + ", adAvatar=" + adAvatar + '}';
+        return "Admin{" + "adID=" + adID + ", adName=" + adName + ", adUserName=" + adUserName + ", adPass=" + adPass + ", adMMail=" + adMail + ", adPhone=" + adPhone + ", adAvatar=" + adAvatar + '}';
     }
     
     

@@ -23,7 +23,7 @@ public class BillDetailDAO {
                         rs.getString(1),
                         rs.getString(2),
                         rs.getDouble(3),
-                        rs.getDouble(4)
+                        rs.getInt(4)
                 );
             }
         } catch (Exception e) {

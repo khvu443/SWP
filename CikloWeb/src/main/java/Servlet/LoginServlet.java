@@ -13,6 +13,8 @@ import java.io.PrintWriter;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
@@ -35,9 +37,14 @@ public class LoginServlet extends HttpServlet {
             AdminDAO al = new AdminDAO();
 
             Driver driver = dl.getDriverBy(user, pass);
-            Customer cus = cl.getCustomerBy(pass, pass);
-            Admin ad = al.getAdminBy(pass, pass);
-
+            Customer cus = cl.getCustomerBy(user, pass);
+            Admin ad = al.getAdminBy(user, pass);
+            if(driver == null && cus == null && ad == null)
+            {
+                request.setAttribute("Error", "<i class=\"bi bi-exclamation-triangle-fill\"></i>ACCOUNT IS NOT EXIST");
+                url="Login.jsp";
+            }
+            
             if (driver != null) {
 
                 if (driver.getDriverID().toUpperCase().contains("D")) {
@@ -70,7 +77,9 @@ public class LoginServlet extends HttpServlet {
                     System.out.println("ADMIN");
                 }
             }
-            if (cus != null) {
+            
+            if (cus != null) 
+            {
                 if (cus.getCusID().toUpperCase().contains("KH")) {
                     session.setAttribute("User", cus);
                     session.setAttribute("ID", cus.getCusID());
@@ -123,4 +132,13 @@ public class LoginServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    boolean isMailValid(String mail) {
+        String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\\.[a-zA-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
+        Pattern r = Pattern.compile(regex);
+        Matcher m = r.matcher(mail);
+        if (m.matches()) {
+            return false;
+        }
+        return true;
+    }
 }

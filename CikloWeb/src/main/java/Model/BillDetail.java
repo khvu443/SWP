@@ -9,18 +9,18 @@ public class BillDetail {
     private String detailID;
     private String routeID;
     private double price;
-    private double waitingTime;
+    private int OrderOfroute;
 
     public BillDetail() {
     }
 
     
     
-    public BillDetail(String detailID, String routeID, double price, double waitingTime) {
+    public BillDetail(String detailID, String routeID, double price, int OrderOfroute) {
         this.detailID = detailID;
         this.routeID = routeID;
         this.price = price;
-        this.waitingTime = waitingTime;
+        this.OrderOfroute = OrderOfroute;
     }
     
     public String getDetailID() {
@@ -47,17 +47,17 @@ public class BillDetail {
         this.price = price;
     }
 
-    public double getWaitingTime() {
-        return waitingTime;
+    public double getOrderOfroute() {
+        return OrderOfroute;
     }
 
-    public void setWaitingTime(double waitingTime) {
-        this.waitingTime = waitingTime;
+    public void setWaitingTime(int OrderOfroute) {
+        this.OrderOfroute = OrderOfroute;
     }
 
     @Override
     public String toString() {
-        return "BillDetail{" + "detailID=" + detailID + ", routeID=" + routeID + ", price=" + price + ", waitingTime=" + waitingTime + '}';
+        return "BillDetail{" + "detailID=" + detailID + ", routeID=" + routeID + ", price=" + price + ", waitingTime=" + OrderOfroute + '}';
     }
     
     

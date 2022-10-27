@@ -37,6 +37,7 @@ public class Driver {
         this.isActive = isActive;
     }
 
+
     public String getDriverID() {
         return driverID;
     }
@@ -64,7 +65,7 @@ public class Driver {
     public void setDriverUserName(String driverUserName) {
         this.driverUserName = driverUserName;
     }
-    
+
     public void setDriverPass(String driverPass) {
         this.driverPass = driverPass;
     }
@@ -137,7 +138,5 @@ public class Driver {
     public String toString() {
         return "Driver{" + "driverID=" + driverID + ", driverName=" + driverName + ", driverUserName=" + driverUserName + ", driverPass=" + driverPass + ", driverMail=" + driverMail + ", driverPhone=" + driverPhone + ", driverAvatar=" + driverAvatar + ", driverCCCD=" + driverCCCD + ", driverGender=" + driverGender + ", driverStatus=" + driverStatus + ", curStation=" + curStation + ", isActive=" + isActive + '}';
     }
-
-
 
 }

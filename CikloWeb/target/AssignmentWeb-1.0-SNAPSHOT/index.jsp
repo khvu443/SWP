@@ -46,6 +46,7 @@
 
         <jsp:include page="HeaderNFooter/header.jsp"></jsp:include>
 
+
             <!-- ***** Main Banner Area Start ***** -->
             <section id="section-1">
                 <div class="content-slider">
@@ -213,146 +214,147 @@
             <!-- ***** Main Banner Area End ***** -->
 
             <div class="visit-country">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="section-heading">
-                                <h2 class="text-info">Visit Our Route Now</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            </div>
+            ${message}
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="section-heading">
+                            <h2 class="text-info">Visit Our Route Now</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                         </div>
                     </div>
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-lg-7">
-                            <div class="items">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="item">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-sm-5">
-                                                    <div class="image">
-                                                        <img src="assets/images/country-01.jpg" alt="">
-                                                    </div>
+                </div>
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-7">
+                        <div class="items">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-sm-5">
+                                                <div class="image">
+                                                    <img src="assets/images/country-01.jpg" alt="">
                                                 </div>
-                                                <div class="col-lg-8 col-sm-7">
-                                                    <div class="right-content">
-                                                        <h4 class="text-info">ROUTE</h4>
-                                                        <span>Europe</span>
-                                                        <div class="main-button">
-                                                            <a href="about.html">Explore More</a>
-                                                        </div>
-                                                        <p>Short Description.</p>
-                                                        <ul class="info">
-                                                            <li><i class="fa fa-user"></i> 8.66 Mil People</li>
-                                                            <li><i class="fa fa-globe"></i> 41.290 km2</li>
-                                                            <li><i class="fa fa-home"></i> $1.100.200</li>
-                                                        </ul>
-                                                        <div class="text-button">
-                                                            <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                                                        </div>
+                                            </div>
+                                            <div class="col-lg-8 col-sm-7">
+                                                <div class="right-content">
+                                                    <h4 class="text-info">ROUTE</h4>
+                                                    <span>Europe</span>
+                                                    <div class="main-button">
+                                                        <a href="about.html">Explore More</a>
+                                                    </div>
+                                                    <p>Short Description.</p>
+                                                    <ul class="info">
+                                                        <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                        <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                        <li><i class="fa fa-home"></i> $1.100.200</li>
+                                                    </ul>
+                                                    <div class="text-button">
+                                                        <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-12">
-                                        <div class="item">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-sm-5">
-                                                    <div class="image">
-                                                        <img src="assets/images/country-01.jpg" alt="">
-                                                    </div>
+                                <div class="col-lg-12">
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-sm-5">
+                                                <div class="image">
+                                                    <img src="assets/images/country-01.jpg" alt="">
                                                 </div>
-                                                <div class="col-lg-8 col-sm-7">
-                                                    <div class="right-content">
-                                                        <h4 class="text-info">ROUTE</h4>
-                                                        <span>Europe</span>
-                                                        <div class="main-button">
-                                                            <a href="about.html">Explore More</a>
-                                                        </div>
-                                                        <p>Short Description.</p>
-                                                        <ul class="info">
-                                                            <li><i class="fa fa-user"></i> 8.66 Mil People</li>
-                                                            <li><i class="fa fa-globe"></i> 41.290 km2</li>
-                                                            <li><i class="fa fa-home"></i> $1.100.200</li>
-                                                        </ul>
-                                                        <div class="text-button">
-                                                            <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                                                        </div>
+                                            </div>
+                                            <div class="col-lg-8 col-sm-7">
+                                                <div class="right-content">
+                                                    <h4 class="text-info">ROUTE</h4>
+                                                    <span>Europe</span>
+                                                    <div class="main-button">
+                                                        <a href="about.html">Explore More</a>
+                                                    </div>
+                                                    <p>Short Description.</p>
+                                                    <ul class="info">
+                                                        <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                        <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                        <li><i class="fa fa-home"></i> $1.100.200</li>
+                                                    </ul>
+                                                    <div class="text-button">
+                                                        <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-12">
-                                        <div class="item">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-sm-5">
-                                                    <div class="image">
-                                                        <img src="assets/images/country-01.jpg" alt="">
-                                                    </div>
+                                <div class="col-lg-12">
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-sm-5">
+                                                <div class="image">
+                                                    <img src="assets/images/country-01.jpg" alt="">
                                                 </div>
-                                                <div class="col-lg-8 col-sm-7">
-                                                    <div class="right-content">
-                                                        <h4 class="text-info">ROUTE</h4>
-                                                        <span>Europe</span>
-                                                        <div class="main-button">
-                                                            <a href="about.html">Explore More</a>
-                                                        </div>
-                                                        <p>Short Description.</p>
-                                                        <ul class="info">
-                                                            <li><i class="fa fa-user"></i> 8.66 Mil People</li>
-                                                            <li><i class="fa fa-globe"></i> 41.290 km2</li>
-                                                            <li><i class="fa fa-home"></i> $1.100.200</li>
-                                                        </ul>
-                                                        <div class="text-button">
-                                                            <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
-                                                        </div>
+                                            </div>
+                                            <div class="col-lg-8 col-sm-7">
+                                                <div class="right-content">
+                                                    <h4 class="text-info">ROUTE</h4>
+                                                    <span>Europe</span>
+                                                    <div class="main-button">
+                                                        <a href="about.html">Explore More</a>
+                                                    </div>
+                                                    <p>Short Description.</p>
+                                                    <ul class="info">
+                                                        <li><i class="fa fa-user"></i> 8.66 Mil People</li>
+                                                        <li><i class="fa fa-globe"></i> 41.290 km2</li>
+                                                        <li><i class="fa fa-home"></i> $1.100.200</li>
+                                                    </ul>
+                                                    <div class="text-button">
+                                                        <a href="about.html">Need Directions ? <i class="fa fa-arrow-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-12">
-                                        <ul class="page-numbers">
-                                            <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
-                                            <li class="active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
-                                        </ul>
-                                    </div>
+                                <div class="col-lg-12">
+                                    <ul class="page-numbers">
+                                        <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-lg-4"><div id="map"  style="width: 400px; height: 700px;"></div></div>
+                    <div class="col-lg-4"><div id="map"  style="width: 400px; height: 700px;"></div></div>
 
 
+                </div>
+            </div>
+        </div>
+
+        <div class="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2>Are You Looking To Travel ?</h2>
+                        <h4>Make A Reservation By Clicking The Button</h4>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="border-button">
+                            <a href="reservation.html">Book Yours Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="call-to-action">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h2>Are You Looking To Travel ?</h2>
-                            <h4>Make A Reservation By Clicking The Button</h4>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="border-button">
-                                <a href="reservation.html">Book Yours Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Footer-->
+        <!--Footer-->
         <jsp:include page="HeaderNFooter/footer.jsp"></jsp:include>
 
 

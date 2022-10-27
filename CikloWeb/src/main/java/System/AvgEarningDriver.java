@@ -62,7 +62,6 @@ public class AvgEarningDriver {
                     // - dùng hàm isCurrentMonth(date1, date2) để check xem có trùng không
                     if (ct.isCurrentMonth(sdf1.parse(b.get(i).getDate().split("-")[1]), sdf2.parse(shortMonths[j]))) {
                         total += b.get(i).getTotal(); // mỗi lần trùng thì sẽ cộng các hóa đơn lại
-                        System.out.println(j + 1 + " " + total);
                         count += 1; // đếm số lần các tháng trùng
 
                     }

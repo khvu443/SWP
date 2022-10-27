@@ -14,7 +14,6 @@ import jakarta.servlet.http.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -33,7 +32,6 @@ public class DriverPage extends HttpServlet {
 
             HttpSession session = request.getSession();
             Driver driver = (Driver) session.getAttribute("User");
-            System.out.println(driver.toString());
 
             BillDAO bDAO = new BillDAO();
             StationDAO sDAO = new StationDAO();
@@ -43,14 +41,11 @@ public class DriverPage extends HttpServlet {
             ArrayList<Bill> bl = bDAO.getAllBillOfDriver(driver.getDriverID());
             ArrayList<Customer> cl = cDAO.getAllCustomer();
 
-            session.setAttribute("customers", cl);
-            session.setAttribute("stations", sl);
-            session.setAttribute("bill", bl);
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
             // Kiem tra so bill cua driver trong 1 tuan
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             ArrayList<Bill> fl = new ArrayList<>();
-            for (int i = 1; i < bl.size(); i++) {
+            for (int i = 0; i < bl.size(); i++) {
                 if (isDateInCurrentWeek(sdf.parse(bl.get(i).getDate()))) {
                     fl.add(bl.get(i));
                 }
@@ -59,7 +54,7 @@ public class DriverPage extends HttpServlet {
 
             // hien cac chuyen da nhan trong ngay
             ArrayList<Bill> currBill = new ArrayList<>();
-            for (int i = 1; i < bl.size(); i++) {
+            for (int i = 0; i < bl.size(); i++) {
                 if (isDateNow(sdf.parse(bl.get(i).getDate()))) {
                     currBill.add(bl.get(i));
                 }
@@ -68,7 +63,7 @@ public class DriverPage extends HttpServlet {
 
             // So tien va chuyen da nhan trung binh 1 thang
             ArrayList<Bill> monthBill = new ArrayList<>();
-            for (int i = 1; i < bl.size(); i++) {
+            for (int i = 0; i < bl.size(); i++) {
                 if (isCurrentMonth(sdf.parse(bl.get(i).getDate()))) {
                     monthBill.add(bl.get(i));
                 }
@@ -77,6 +72,10 @@ public class DriverPage extends HttpServlet {
 
             save.saveFile(avg.EarningAvg(bl), "EarningAvg");
             save.saveFile(avg.NumberTrip(bl), "NumberTrip");
+
+            session.setAttribute("customers", cl);
+            session.setAttribute("stations", sl);
+            session.setAttribute("bill", bl);
 
             response.sendRedirect("./Driver/DriverPage.jsp");
         }
