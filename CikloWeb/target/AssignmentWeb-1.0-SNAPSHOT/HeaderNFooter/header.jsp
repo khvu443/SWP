@@ -81,10 +81,10 @@
                             <c:if test="${not empty User}">
                                 <div class="d-flex">                            
                                     <c:set var = "ID" value = "${ID}"></c:set>
-                                    <c:if test = "${fn:contains(ID, 'D')}">
+                                    <c:if test = "${ID eq 'D'}">
                                         <div class="dropdown">
-                                            <a onclick="hamDropdown()" class="nut_dropdown">
-                                                Hello ${User.driverName}
+                                            <a onclick="hamDropdown()" class="nut_dropdown" >
+                                                Hello ${User.driverUserName}
                                             </a>
                                         </div>
                                         <div class="noidung_dropdown">
@@ -110,16 +110,19 @@
                                         </div>
                                     </c:if>
 
-                                    <c:if test = "${fn:contains(ID, 'AD')}">
+                                    <c:if test = "${ID eq 'AD'}">
                                         <div class="dropdown">
                                             <a onclick="hamDropdown()" class="nut_dropdown">
-                                                Hello ${User.adName}
+                                                Hello ${User.adUserName}
                                             </a>
                                         </div>
 
                                         <div class="noidung_dropdown">
-                                            <a id="dropItem" href="UpdateAccountServlet?id=${User.cusID}" style="font-size: 14px" >Manager Account</a>
+                                            <a id="dropItem" href="UpdateAccountServlet?id=${User.adID}" style="font-size: 12px" >Manager Account</a>
                                             <hr class="solid" style="border-top: 1px solid #D9D9D9;">
+                                            <a id="dropItem" href="AdminServlet" style="margin-top: -20px; font-size: 14px">Admin Home</a>
+                                            <hr class="solid" style="border-top: 1px solid #D9D9D9;">
+
                                             <a id="dropItem" href="LogoutServlet" style="margin-top: -20px; font-size: 14px">Logout</a>
                                         </div>
                                     </c:if>

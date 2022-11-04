@@ -9,18 +9,16 @@ public class Bill {
     private String billID;
     private String cusID;
     private String driverID;
-    private String detailID;
     private double Total;
     private String Date;
 
     public Bill() {
     }
 
-    public Bill(String billID, String cusID, String driverID, String detailID, double total, String Date) {
+    public Bill(String billID, String cusID, String driverID, double total, String Date) {
         this.billID = billID;
         this.cusID = cusID;
         this.driverID = driverID;
-        this.detailID = detailID;
         this.Total = total;
         this.Date = Date;
     }
@@ -65,17 +63,10 @@ public class Bill {
         this.driverID = driverID;
     }
 
-    public String getDetailID() {
-        return detailID;
-    }
-
-    public void setDetailID(String detailID) {
-        this.detailID = detailID;
-    }
 
     @Override
     public String toString() {
-        return "Bill{" + "billID=" + billID + ", cusID=" + cusID + ", driverID=" + driverID + ", detailID=" + detailID + ", Total=" + Total + ", Date=" + Date + '}';
+        return "Bill{" + "billID=" + billID + ", cusID=" + cusID + ", driverID=" + driverID + ", Total=" + Total + ", Date=" + Date + '}';
     }
 
 }

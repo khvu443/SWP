@@ -10,48 +10,30 @@
     </button>
 
     <!-- Topbar Search -->
-    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="" method="post">
+    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="" method="">
         <div class="input-group">                                
-            <select class="form-control small" name="station">
+            <select class="form-control small" name="station" id="station">
                 <c:forEach items="${stations}" var="s">
-                    <option value="${s.stationID}" ${s.stationID == User.driverID ? 'selected':''}> Station ${s.stationName}</option>
+                    <option value="${s.stationID}" ${s.stationID == User.curStation ? 'selected':''}> Station ${s.stationID}</option>
                 </c:forEach>
             </select>
 
             <input class="form-control small" name="status" value="${User.driverStatus == true ? 'Free' : 'Busy'}" readonly>
             <div class="input-group-append">
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#saveModal">
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#saveModal" id="change">
                     <i class="fas fa-check fa-sm"></i>
                 </button>
-            </div>
-        </div>
+            </div> 
+        </div>                 
     </form>
+
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
         <!-- Nav Item - Alerts -->
         <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell fa-fw"></i>
-                <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">1</span>
-            </a>
-            <!-- Dropdown - Alerts -->
-            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header">Notificaction</h6>
+            <a id="current" class="nav-link text-dark">Station Current: Station ${User.curStation}</a>
 
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                    <div class="mr-3">
-                        <div class="icon-circle bg-success">
-                            <i class="fas fa-donate text-white"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="small text-gray-500">December 7, 2019</div>
-                        $290.29 has been deposited into your account!
-                    </div>
-                </a>
-            </div>
         </li>
 
         <div class="topbar-divider d-no ne d-sm-block"></div>
@@ -88,6 +70,34 @@
         </li>
     </ul>
 </nav>
+
+
+<!-- Jquery Ajax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#change").click(function ()
+        {
+            var id = $("#station").val();
+            console.log(id);
+            $.ajax({
+                url: "../DriverChangeStation",
+                type: "GET",
+                data: {"sID": id},
+                error: function ()
+                {
+                    console.log("error");
+                },
+                success: function (data)
+                {
+
+                }
+            });
+            $("#current").text("Station Current: Station" + id);
+        });
+    });
+</script>
 
 
 

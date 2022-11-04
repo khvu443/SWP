@@ -83,7 +83,7 @@
                                                     <c:forEach var="bill" items="${bills}">
                                                         <c:set var="total" value="${total + bill.getTotal()}" />
                                                     </c:forEach>
-                                                    <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${total / 7}"/> VND
+                                                    <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${total}"/> VND
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -133,7 +133,7 @@
                                                     <c:forEach var="bill" items="${monthBill}">
                                                         <c:set var="month" value="${month + bill.getTotal()}" />
                                                     </c:forEach>
-                                                    <fmt:formatNumber type="number" value="${month / 30}"/> VND
+                                                    <fmt:formatNumber type="number" value="${month}"/> VND
                                                 </div>
                                             </div>
                                             <div class="col-auto">
@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                            <table class="table table-bordered" id="" width="100%" cellspacing="0">
+                                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
                                                         <th>ID</th>
@@ -276,30 +276,6 @@
             </div>
         </div>
 
-        <!-- Save Modal-->
-        <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                            Do you want to save?
-                        </h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Select "Save" below if you are ready to save your change.
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">
-                            Cancel
-                        </button>
-                        <a class="btn btn-primary" href="#">Save</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Bootstrap core JavaScript-->
         <script src="../Driver/vendor/jquery/jquery.min.js"></script>

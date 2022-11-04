@@ -41,11 +41,11 @@
                                                value="${u.cusUserName}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'D')}">
+                                           <c:if test = "${ ID eq 'D'}">
                                                value="${u.driverUserName}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'AD')}">
+                                           <c:if test = "${ID eq 'AD'}">
                                                value="${u.adUserName}" 
                                            </c:if>
                                            required>
@@ -64,18 +64,18 @@
                                                value="${u.cusName}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'D')}">
+                                           <c:if test = "${ ID eq 'D'}">
                                                value="${u.driverName}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'AD')}">
+                                           <c:if test = "${ID eq 'AD'}">
                                                value="${u.adName}" 
                                            </c:if>
                                            required>
                                     <label for="floatingPassword">Name</label>
                                 </div>
 
-                                <c:if test = "${fn:contains(ID, 'D')}">
+                                <c:if test = "${ ID eq 'D'}">
                                     <div class="form-group my-3">
 
                                         <div class="form-check form-check-inline">
@@ -105,11 +105,11 @@
                                                value="${u.cusPhone}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'D')}">
+                                           <c:if test = "${ ID eq 'D'}">
                                                value="${u.driverPhone}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'AD')}">
+                                           <c:if test = "${ID eq 'AD'}">
                                                value="${u.adPhone}" 
                                            </c:if>
                                            required>
@@ -123,11 +123,11 @@
                                                value="${u.cusMail}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'D')}">
+                                           <c:if test = "${ ID eq 'D'}">
                                                value="${u.driverMail}" 
                                            </c:if>
 
-                                           <c:if test = "${fn:contains(ID, 'AD')}">
+                                           <c:if test = "${ID eq 'AD'}">
                                                value="${u.adMail}" 
                                            </c:if>
 
@@ -140,7 +140,7 @@
                                 </button>
 
                                 <button class="btn btn-primary">
-                                    <a href="index.jsp" class="text-decoration-none text-light">
+                                    <a href="HomeSevlet" class="text-decoration-none text-light">
                                         Cancel
                                     </a>
                                 </button>

@@ -29,9 +29,9 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 //Ajax Block
 const xmlhttps = new XMLHttpRequest();
-// Copy đoạn địa chỉ "http://localhost:8080/CikloWeb//" rồi thêm cái thư mục đã lưu file json
-// Vd: đây lưu vào Driver/JSON/... Json => http://localhost:8080/CikloWeb//Driver/JSON/... json
-const json = 'http://localhost:8080/CikloWeb//Driver/JSON/NumberTrip.json';
+// Bằng cách dùng servlet content type là json thì sẽ biến servlet đó 1 json -> load đc dữ liệu mới sẽ nhanh hơn là tạo 1 file json
+// Do file ngoài sẽ load lâu hơn so với các file jsp và servlet
+const json = 'http://localhost:8080/CikloWeb/DriverChartTrip';
 xmlhttps.open('GET', json, true); // để get json
 xmlhttps.send();
 

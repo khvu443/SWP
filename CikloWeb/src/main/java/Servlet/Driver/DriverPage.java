@@ -70,14 +70,10 @@ public class DriverPage extends HttpServlet {
             }
             session.setAttribute("monthBill", monthBill);
 
-            save.saveFile(avg.EarningAvg(bl), "EarningAvg");
-            save.saveFile(avg.NumberTrip(bl), "NumberTrip");
-
             session.setAttribute("customers", cl);
             session.setAttribute("stations", sl);
             session.setAttribute("bill", bl);
-
-            response.sendRedirect("./Driver/DriverPage.jsp");
+            response.sendRedirect("./Driver/DriverPage.jsp"); 
         }
     }
 

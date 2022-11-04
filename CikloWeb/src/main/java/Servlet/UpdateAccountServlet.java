@@ -41,23 +41,23 @@ public class UpdateAccountServlet extends HttpServlet {
             Customer cus = cdao.getInforBy(acc.getCusID());
             session.setAttribute("u", cus);
 
-            session.setAttribute("id", acc.getCusID());
+            session.setAttribute("id", acc.getCusID().split("\\d")[0]);
 
         }
-        if (id.contains("AD")) {
+        if (id.equalsIgnoreCase("AD")) {
             Admin ad = (Admin) session.getAttribute("User");
             System.out.println(ad.toString());
             Admin a = adao.getAdminInfo(ad.getAdID());
             session.setAttribute("u", a);
-            session.setAttribute("id", ad.getAdID());
+            session.setAttribute("id", ad.getAdID().split("\\d")[0]);
         }
 
-        if (id.contains("D")) {
+        if (id.equalsIgnoreCase("D")) {
             Driver driver = (Driver) session.getAttribute("User");
             System.out.println(driver.toString());
             Driver d = ddao.getDriverInfo(driver.getDriverID());
             session.setAttribute("u", d);
-            session.setAttribute("id", driver.getDriverID());
+            session.setAttribute("id", driver.getDriverID().split("\\d")[0]);
         }
 
         request.getRequestDispatcher("UpdateAccount.jsp").

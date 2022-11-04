@@ -22,12 +22,11 @@ public class BillDetailDAO {
                 return new BillDetail(
                         rs.getString(1),
                         rs.getString(2),
-                        rs.getDouble(3),
                         rs.getInt(4)
                 );
             }
         } catch (Exception e) {
-            System.out.println("Error");
+             System.out.println("bill detail dao: " + e.getMessage());
         }
         return null;
     }

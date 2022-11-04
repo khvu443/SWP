@@ -22,8 +22,7 @@ public class StationDAO {
             conn = new DBUtils().makeConnection();
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
-            while(rs.next())
-            {
+            while (rs.next()) {
                 stations.add(new Station(
                         rs.getString(1),
                         rs.getString(2),
@@ -35,4 +34,5 @@ public class StationDAO {
         }
         return stations;
     }
+
 }

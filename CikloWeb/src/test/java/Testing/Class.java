@@ -23,7 +23,7 @@ public class Class {
     public static void main(String[] args) throws ParseException {
 
         BillDAO bills = new BillDAO();
-        ArrayList<Bill> b = bills.getAllBill();
+        ArrayList<Bill> b = bills.getAllBillOfDriver("D1");
 
         for(Bill x : b)
         {

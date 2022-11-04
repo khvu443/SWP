@@ -46,10 +46,9 @@ public class LoginServlet extends HttpServlet {
             }
             
             if (driver != null) {
-
                 if (driver.getDriverID().toUpperCase().contains("D")) {
                     session.setAttribute("User", driver);
-                    session.setAttribute("ID", driver.getDriverID());
+                    session.setAttribute("ID", driver.getDriverID().split("\\d")[0]);
 
                     if ((remember) != null) {
                         if (remember.equalsIgnoreCase("1")) {
@@ -72,8 +71,9 @@ public class LoginServlet extends HttpServlet {
             if (ad != null) {
                 if (ad.getAdID().toUpperCase().contains("AD")) {
                     session.setAttribute("User", ad);
-                    session.setAttribute("ID", ad.getAdID());
-//                    url = "admin.jsp";
+                    session.setAttribute("ID", ad.getAdID().split("\\d")[0]);
+                    
+                    url = "AdminServlet";
                     System.out.println("ADMIN");
                 }
             }

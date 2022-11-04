@@ -33,7 +33,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 // tương tự bên bar chart
 // - Lưu ý là nhớ sửa tooltip và yAxies có ký hiệu  tiền "$" thành VND
 const xml = new XMLHttpRequest();
-const url = 'http://localhost:8080/CikloWeb//Driver/JSON/EarningAvg.json';
+const url = 'http://localhost:8080/CikloWeb/DriverChartBill';
 xml.open('GET', url, true);
 xml.send();
 

@@ -29,13 +29,12 @@ public class BillDAO {
                         rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getString(4),
-                        rs.getDouble(5),
-                        rs.getString(6)
+                        rs.getDouble(4),
+                        rs.getString(5)
                 ));
             }
         } catch (Exception e) {
-            System.out.println("Error");
+            System.out.println("bill dao: " + e.getMessage());
         }
         return bl;
     }
@@ -52,13 +51,12 @@ public class BillDAO {
                         rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getString(4),
-                        rs.getDouble(5),
-                        rs.getString(6)
+                        rs.getDouble(4),
+                        rs.getString(5)
                 ));
             }
         } catch (Exception e) {
-            System.out.println("Error");
+             System.out.println("bill dao: " + e.getMessage());
         }
         return bl;
     }

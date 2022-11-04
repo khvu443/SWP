@@ -112,10 +112,25 @@ public class DriverDAO {
             ps.setString(6, avatar);
             ps.setBoolean(7, gender);
             ps.setString(8, id);
-            
+
             ps.executeUpdate();
         } catch (Exception ex) {
 
         }
     }
+
+    public void updateDriverStation(String id, String stationID) {
+        String query = "update Driver set CurrentStation = ? where driverID = ?";
+        try {
+            conn = new DBUtils().makeConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, stationID);
+            ps.setString(2, id);
+
+            ps.executeUpdate();
+        } catch (Exception ex) {
+
+        }
+    }
+
 }

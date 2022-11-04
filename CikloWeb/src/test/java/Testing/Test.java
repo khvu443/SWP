@@ -21,7 +21,7 @@ public class Test {
         DriverDAO dao = new DriverDAO();
         Driver d = dao.getDriverBy("NVA", "1234");
         
-        System.out.println(d.getDriverAvatar());
+        System.out.println(d.getDriverID().split("\\d")[0]);
     }
 
     public static boolean isDateInCurrentWeek(Date date) {

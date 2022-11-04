@@ -72,7 +72,7 @@ public class AvgEarningDriver {
             avg.put("month", shortMonths[j]); //lưu từng tháng
             // kiểm tra xem count nó phải khác không nếu không khác 0 thì earn của tháng đó sẽ là 0
             if (count != 0) {
-                avg.put("earn", String.valueOf(total / count));
+                avg.put("earn", String.valueOf(total));
             } else {
                 avg.put("earn", "0");
             }

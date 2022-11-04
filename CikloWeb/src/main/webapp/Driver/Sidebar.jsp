@@ -33,7 +33,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost:8080/CikloWeb/index.jsp">
+                <a class="nav-link" href="http://localhost:8080/CikloWeb/HomeSevlet">
                     <i class="fa fa-house-user"></i>
                     <span>Home Page</span></a>
             </li>
