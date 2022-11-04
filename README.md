@@ -7,3 +7,7 @@ Có chỉnh sửa lại Route, Bill và Bill Detail
 + Dữ liệu mới là tuyến lớn ko còn và sẽ là những tuyến nhỏ
 
 Có liên kết giữa 2 bảng driver và route
+
+----------------------------------------------------------------------------------
+
+Có trang update tài khoản, drop down 
